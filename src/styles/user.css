@@ -1,0 +1,87 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    background: #222;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    width: 100%;
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+.container .profile-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.profile-container .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.profile-container .profile:hover .name {
+    color: #fff;
+}
+.profile .image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+}
+.profile .image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+}
+.profile:hover .image-wrapper::after {
+    border-color: #fff;
+}
+.profile img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3.5vw;
+    color: #fff;
+}
+
+.profile .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.1s all ease;
+    color: #a5a5a5;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #ccc;
+    padding: 15px 50px;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+
+.btn:hover {
+    color: #fff;
+    border-color: #fff;
+}
